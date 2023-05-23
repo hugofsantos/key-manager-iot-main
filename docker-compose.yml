@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  backend:
+    container_name: key-manager-iot-backend
+    build: 
+      context: ./key-manager-iot-dev/key-manager-iot-backend
+      dockerfile: Dockerfile
+    ports:
+    - "8080:8080"
+    volumes:
+    - ./key-manager-iot-dev/key-manager-iot-backend:/app/
+    - /app/node_modules/
+  frontend:
+    container_name: key-manager-iot-frontend
+    build: 
+      context: ./key-manager-iot-dev/key-manager-iot-frontend
+      dockerfile: Dockerfile    
+    ports:
+    - "3000:3000"
+    volumes:
+      - ./key-manager-iot-dev/key-manager-iot-frontend:/usr/app/
+      - /usr/app/node_modules/
