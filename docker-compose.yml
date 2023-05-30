@@ -21,3 +21,14 @@ services:
     volumes:
       - ./key-manager-iot-dev/key-manager-iot-frontend:/usr/app/
       - /usr/app/node_modules/
+  mongodb:
+    container_name: key-manager-iot-mongodb
+    image: mongo
+    restart: on-failure
+    environment: 
+    - TZ=Brazil/East
+    ports:
+    - "27017:27017"
+    volumes:
+    - ./mongodb/:/data/db/
+    
