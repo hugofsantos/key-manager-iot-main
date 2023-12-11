@@ -6,6 +6,6 @@ cd ./key-manager-iot-dev
 
 echo "Clonando repositórios (Backend e Frontend)"
 
-#git clone https://projetos.imd.ufrn.br/conectefab/supervisorio/conectefab-middleware-iot.git
-git clone https://projetos.imd.ufrn.br/conectefab/supervisorio/conectefab-front.git
-git clone https://projetos.imd.ufrn.br/conectefab/supervisorio/conectefab-back.git
+git clone https://github.com/hugofsantos/key-manager-iot-esp.git
+git clone https://github.com/hugofsantos/key-manager-iot-backend.git
+git clone https://github.com/hugofsantos/key-manager-iot-frontend.git
